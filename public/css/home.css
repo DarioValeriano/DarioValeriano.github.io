@@ -1,0 +1,286 @@
+*{
+    padding: 0;
+    margin: 0;
+    Font-family: Helvetica, Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+}
+
+header {
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    align-items: flex-end;
+}
+
+
+.lista-nav {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.lista-nav li {
+    text-align: center;
+    list-style: none;
+    color: rgba(255, 255, 255, 0.67);
+    width: 100%;
+    flex-grow: 1;
+    height: 70px;
+}
+
+.lista-nav li p{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.lista-nav li p:hover{
+    background-color: rgba(255, 255, 255, 0.367);
+}
+
+.menu-hamburguesa{
+    background: none;
+    border: none;
+    width: 25%;
+    height: 70px;
+    margin-right: 10px;
+}
+
+.material-symbols-outlined{
+    font-size: 40px;
+    color: rgba(255, 255, 255, 0.67);
+}
+
+body section{
+    padding: 10%;
+    text-align: center;
+}
+
+.presentacion {
+    padding: 10% 5% 10% 5%;
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    background-color: rgb(74, 95, 163);
+    color: white;
+    height: 100%;
+}
+
+.foto{
+    width: 99%;
+    position: absolute;
+    top: 20%;
+    right: 0px;
+    z-index: 1;
+}
+
+.hola:hover{
+    transition: 0.2s;
+    text-shadow: -19px 20px 20px #0000008f;
+}
+
+.hola{
+    font-size: 630%;
+    z-index: 0;
+    color: rgba(255, 255, 255, 0.67);
+}
+
+.nombre {
+    position: relative;
+    right: 8px;
+    margin-top: 35%;
+    font-size: 320%;
+    z-index: 3;
+}
+
+.nombre::before{
+    transform: scaleX(0);
+    transform-origin: bottom right;
+}
+
+.nombre:hover::before {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nombre::before {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: #1c244c;
+    z-index: -1;
+    transition: transform .3s ease;
+  }
+
+.descripcion{
+    padding: 30px;
+    border-radius: 20px;
+    background: linear-gradient(135deg, rgba(10, 10, 10, 0.321), rgba(6, 6, 6, 0.269));
+    
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.profesion {
+    /*position: relative;
+    right: 8px;
+    */
+    z-index: 4;
+}
+
+.detalle-presentacion{
+    margin: 5% 0 5% 0;
+    z-index: 5;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-around;
+    z-index: 12;
+}
+
+.boton{
+    padding: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    background-color: rgba(0, 0, 0, 0.362);
+    color: rgb(210, 210, 210);
+    font-weight: bold;
+    margin: 2px;
+    width: 100%;
+}
+
+.boton:hover{
+    background-color: rgba(255, 255, 255, 0.687);
+    color: #394785;
+    font-size: 20px;
+    transition: 0.5s;
+    border: solid 2px #394785;
+    box-shadow: 0 8px 20px 0 #c9cce061;
+}
+
+.sobre-mi {
+    background-color: rgb(36, 36, 36);
+}
+
+
+
+
+.blured {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+
+.redimension{
+    width: 50%;
+    height: 100vh;
+}
+
+.invisible{
+    display: none;
+}
+
+
+
+@media(min-width:768px){
+
+    header{
+        align-items: center;
+        height: 70px;
+        align-items: none;
+        left: 0;
+        right: none;
+        width: 100%;
+        transition: 0.4s;
+    }
+
+    .redimension{
+        width: 100%;
+        height: 70px;
+    }
+
+    .menu-hamburguesa{
+        display: none;
+    }
+
+    .lista-nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        flex-direction: row-reverse;
+    }
+
+    .detalle-presentacion{
+        margin: 2% 0 2% 0;
+    }
+
+    .botones {
+        justify-content: flex-start;
+    }
+
+    .boton{
+        margin: 10px;
+    }
+
+}
+
+@media(min-width:1024px){
+    .presentacion{
+        padding: 6% 5% 6% 5%;
+    }
+
+   .foto{
+        width: 70%;
+        position: relative;
+        left: 15%;
+        
+   }
+
+   .holaa{
+        position: absolute;
+        top: 20%;
+        margin: auto;
+   }
+
+   .soy{
+        position: absolute;
+        top: 20%;
+        right: 10%;
+        margin: auto;
+   }
+
+   .hola {
+        font-size: 1500%;
+   }
+
+   .nombre{
+        position: relative;
+        font-size: 80px;
+        margin-top: 0;
+        top: -50px;
+   }
+
+   .profesion{
+        font-size: 36px;
+
+   }
+}
