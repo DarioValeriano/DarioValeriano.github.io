@@ -29,16 +29,22 @@ header {
     width: 100%;
 }
 
-.lista-nav li {
+.elemento-lista {
     text-align: center;
     list-style: none;
     color: rgba(255, 255, 255, 0.67);
+    /*color: whitesmoke;*/
     width: 100%;
     flex-grow: 1;
     height: 70px;
+    /*text-shadow: 1px 2px 3px black;*/
 }
 
-.lista-nav li p{
+.sombreado{
+    text-shadow: 1px 2px 3px black;
+}
+
+.elemento-lista p{
     text-align: center;
     display: flex;
     align-items: center;
@@ -46,6 +52,7 @@ header {
     height: 70px;
     width: 100%;
     transition: 0.2s;
+    font-size: 110%;
 }
 
 .lista-nav li p:hover{
@@ -244,6 +251,7 @@ body section{
 }
 
 @media(min-width:1024px){
+
     .presentacion{
         padding: 6% 5% 6% 5%;
     }
