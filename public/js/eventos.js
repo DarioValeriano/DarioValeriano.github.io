@@ -30,7 +30,7 @@ window.addEventListener("scroll", () =>{
     if(lista.classList.contains('invisible')){
         navbar.classList.toggle("blured", window.scrollY > 0)
         console.log(elementosLista)
-        elementosLista.classList.toggle("sombreado", window.scrollY > 0)
+        //elementosLista.classList.toggle("sombreado", window.scrollY > 0)
     }
     
 })
