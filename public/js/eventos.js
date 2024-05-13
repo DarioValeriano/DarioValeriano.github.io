@@ -37,4 +37,22 @@ window.addEventListener("scroll", () =>{
 
 //
 
+window.addEventListener('resize', function() {
+    let elemento1 = document.querySelector('.foto');
+    let elemento2 = document.querySelector('.bloque-principal');
+    // Verificar si el ancho del viewport es mayor a 768 píxeles
+    if (window.innerWidth >= 768) {
+        // Restablecer la altura del elemento2 para que pueda calcularse de nuevo
+        elemento2.style.height = 'auto';
+        
+        // Obtener la altura del elemento1
+        let alturaElemento1 = elemento1.offsetHeight;
+        
+        // Asignar la altura del elemento1 al elemento2
+        elemento2.style.height = alturaElemento1 + 'px';
+    } else {
+        elemento2.style.height = '322px';
+    }
+});
 
+window.dispatchEvent(new Event('resize'));

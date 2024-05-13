@@ -1,7 +1,7 @@
 *{
     padding: 0;
     margin: 0;
-    Font-family: Helvetica, Arial, sans-serif;
+    Font-family: Aileron, Helvetica, Arial, sans-serif;
 }
 
 body {
@@ -44,7 +44,7 @@ header {
     text-shadow: 1px 2px 3px black;
 }
 
-.elemento-lista p{
+.elemento-lista a{
     text-align: center;
     display: flex;
     align-items: center;
@@ -54,9 +54,11 @@ header {
     transition: 0.2s;
     font-size: 110%;
     text-shadow: -3px 4px 9px #00000040;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.67);
 }
 
-.lista-nav li p:hover{
+.lista-nav li a:hover{
     background-color: rgba(255, 255, 255, 0.367);
     text-shadow: -3px 5px 7px #000000;
     /*-3px 4px 6px #000000cf*/
@@ -87,42 +89,62 @@ body section{
     flex-direction: column;
     text-align: start;
     /*background-color: rgb(74, 95, 163);*/
-    background-image: url('/public/img/Fondo-2.png');
+    background-image: url('/public/img/Fondo-0.png');
     background-size: cover;
     color: white;
     height: 100%;
 }
 
-.foto{
-    /*width: 99%;*/
-    width: 70%;
-    position: absolute;
-    /*top: 20%;*/
-    right: 0px;
-    z-index: 1;
+.presentacion-bloque{
+    width: 100%;
 }
 
-.hola:hover{
-    transition: 0.2s;
-    text-shadow: -19px 20px 20px #0000008f;
+.presentacion-contenido {
+    position: relative;
 }
+
+.bloque-principal{
+    position: relative;
+    max-height: 510px;
+    padding: 20px;
+}
+
+.foto {
+    width: 90%;
+    position: absolute;
+    z-index: 1;
+    filter: grayscale(100%);
+    top: 80px;
+    right: -10px;
+    bottom: 0;
+    margin: auto;
+}
+
+/*.hola:hover{
+    
+    text-shadow: -19px 20px 20px #0000008f;
+    /*transition: 0.05s;
+}*/
 
 .hola{
     font-size: 630%;
     z-index: 0;
-    color: rgba(255, 255, 255, 0.67);
+    /*color: rgba(255, 255, 255, 0.67);*/
+    text-shadow: -19px 20px 20px #0000008f;
 }
 
 .soy{
     position: relative;
 }
-
+ 
 .nombre {
-    position: relative;
-    right: 8px;
-    /*margin-top: 35%;*/
-    font-size: 320%;
+    padding: 5px;
+    text-shadow: -19px 20px 20px #0000008f;
+    position: absolute;
+    left: 20px;
+    font-size: 270%;
     z-index: 3;
+    bottom: 0;
 }
 
 .nombre::before{
@@ -141,7 +163,8 @@ body section{
     position: absolute;
     top: 0; right: 0; bottom: 0; left: 0;
     inset: 0 0 0 0;
-    background: #1c244c;
+    /*background: #1c244c;*/
+    background: #316cba;
     z-index: -1;
     transition: transform .3s ease;
   }
@@ -150,8 +173,11 @@ body section{
     padding: 30px;
     border-radius: 20px;
     background: linear-gradient(135deg, rgba(10, 10, 10, 0.321), rgba(6, 6, 6, 0.269));
-    
+    /*background: linear-gradient(135deg, rgb(0 34 115 / 32%), rgb(148 162 233 / 27%));*/
+    z-index: 2;
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    position: relative;
+    
 }
 
 .profesion {
@@ -164,34 +190,95 @@ body section{
 .detalle-presentacion{
     margin: 5% 0 5% 0;
     z-index: 5;
+    font-size: 20px;
 }
 
 .botones {
     display: flex;
     justify-content: space-around;
     z-index: 12;
+    
 }
 
 .boton{
-    padding: 20px;
-    border-radius: 5px;
+    /*padding: 20px;
+    border-radius: 30px;
     border: none;
-    font-size: 18px;
     background-color: rgba(0, 0, 0, 0.362);
     color: rgb(210, 210, 210);
     font-weight: bold;
     margin: 2px;
-    width: 100%;
+    width: 100%;*/
+    --color: #316cba;
+    padding: 0.8em 1.7em;
+    background-color: transparent;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: 400;
+    font-size: 17px;
+    border: 1px solid;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--color);
+    z-index: 1;
+    
 }
 
-.boton:hover{
+.boton::before, .boton::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 50px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: var(--color);
+    transition: 1s ease;
+   }
+   
+.boton::before {
+    top: -1em;
+    left: -1em;
+}
+
+.boton::after {
+    left: calc(100% + 1em);
+    top: calc(100% + 1em);
+}
+
+.boton:hover::before, .boton:hover::after {
+    height: 410px;
+    width: 410px;
+}
+
+.boton:hover {
+    color: white;
+}
+
+.boton:active {
+    filter: brightness(.8);
+}
+
+.boton a{
+    text-decoration: none;
+    color: #316cba;
+}
+
+.boton a:hover{
+    color: white;
+}
+   
+
+/*.boton:hover{
     background-color: rgba(255, 255, 255, 0.687);
     color: #394785;
-    font-size: 20px;
-    transition: 0.5s;
-    border: solid 2px #394785;
+    transition: 0.5q2s;
     box-shadow: 0 8px 20px 0 #c9cce061;
-}
+}*/
 
 .sobre-mi {
     background-color: rgb(36, 36, 36);
@@ -203,15 +290,19 @@ body section{
 }
 
 .proyectos {
-
+    background-image: url('/public/img/Fondo-10.png');
+    color: white;
 }
 
 .formacion {
+    background-color: rgb(36, 36, 36);
+    color: white;
 
 }
 
 .contacto{
-
+    background-image: url('/public/img/Fondo-10.png');
+    color: white;
 }
 
 
@@ -223,7 +314,7 @@ body section{
 
 
 .redimension{
-    width: 50%;
+    width: 60%;
     height: 100vh;
 }
 
@@ -234,6 +325,8 @@ body section{
 
 
 @media(min-width:768px){
+
+    
 
     header{
         align-items: center;
@@ -259,7 +352,40 @@ body section{
         justify-content: space-around;
         align-items: center;
         width: 80%;
-        flex-direction: row-reverse;
+        flex-direction: row;
+    }
+
+    .saludo{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+   }
+
+   .hola {
+    font-size: 22vw;
+    }
+
+    .foto{
+        width: 70%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: none;
+    }
+
+    .nombre{
+        font-size: 8vw;
+        bottom: -25px;
+        left: 30px;
+        margin: auto;
+    }
+
+    .descripcion{
+        margin-top: 20px;
+    }
+
+    .boton{
+
     }
 
     .detalle-presentacion{
@@ -280,54 +406,48 @@ body section{
 
     .presentacion{
         padding: 6% 5% 6% 5%;
-        
+        justify-content: center;
+        align-items: center;
     }
 
     .presentacion-bloque{
-        width: 1024px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        max-width: 1500px;
     }
 
    .foto{
-        width: 70%;
-        position: absolute;
+        max-width: 900px;
         /*display: flex;*/
    }
 
    .holaa{
         /*position: absolute;
         top: 20%;*/
-        margin: auto;
+        /*margin: auto;*/
    }
 
    .soy{
         /*position: absolute;
         top: 20%;
         right: 10%;*/
-        margin: auto;
-   }
-
-   .saludo{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-   }
-
-   .hola {
-        font-size: 1500%;
+        /*margin: auto;*/
    }
 
    .nombre{
-        position: relative;
         font-size: 80px;
-        margin-top: 0;
-        top: -50px;
    }
 
    .profesion{
         font-size: 36px;
 
+   }
+}
+
+@media(min-width:1440px){
+    .presentacion{
+        padding: 40px 70px;
+    }
+
+    .hola {
+        font-size: 320px;
    }
 }
