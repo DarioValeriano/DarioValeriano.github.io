@@ -26,12 +26,62 @@ menu.addEventListener('click', () => {
     }
 })
 
+for (let i = 0; i < elementosLista.length; i++) {
+    elementosLista[i].addEventListener('click', () => {
+        lista.classList.add('invisible')
+        navbar.classList.remove('redimension')
+        if(window.scrollY == 0){
+            navbar.classList.remove('blured')
+        }
+    })
+}
+
+
+/*
+let ticking = false;
+
+function adjustScroll() {
+    const sections = document.querySelectorAll('section');
+    const scrollPosition = window.scrollY || window.pageYOffset;
+
+    sections.forEach((section, index) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollPosition > sectionTop + sectionHeight / 2 && index < sections.length - 1) {
+            window.scrollTo({
+                top: sections[index + 1].offsetTop,
+                behavior: 'smooth'
+            });
+        } else if (scrollPosition < sectionTop - sectionHeight / 2 && index > 0) {
+            window.scrollTo({
+                top: sections[index - 1].offsetTop,
+                behavior: 'smooth'
+            });
+        }
+    });
+
+    ticking = false;
+}
+
+
+
+*/
+
+
+
 window.addEventListener("scroll", () =>{
     if(lista.classList.contains('invisible')){
         navbar.classList.toggle("blured", window.scrollY > 0)
         console.log(elementosLista)
         //elementosLista.classList.toggle("sombreado", window.scrollY > 0)
     }
+
+
+    /*if (!ticking) {
+        window.requestAnimationFrame(adjustScroll);
+        ticking = true;
+    }*/
     
 })
 

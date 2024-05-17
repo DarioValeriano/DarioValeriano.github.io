@@ -4,8 +4,14 @@
     Font-family: Aileron, Helvetica, Arial, sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 header {
@@ -73,14 +79,16 @@ header {
     margin-right: 10px;
 }
 
-.material-symbols-outlined{
+.fa-bars{
     font-size: 40px;
-    color: rgba(255, 255, 255, 0.67);
+    color: #ffffffab;
 }
 
 body section{
     padding: 10%;
     text-align: center;
+    scroll-snap-align: start;
+    /*height: 100vh;*/
 }
 
 .presentacion {
@@ -289,6 +297,19 @@ body section{
     background-color: #dadada;
 }
 
+.lenguajes, .frameworks, .librerias, .bases-de-datos, .softwares {
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+}
+
+.lenguaje, .framework, .libreria, .base-datos, .software{
+    width: 40%;
+}
+
 .proyectos {
     background-image: url('/public/img/Fondo-10.png');
     color: white;
@@ -400,6 +421,10 @@ body section{
         margin: 10px;
     }
 
+    .lenguaje, .framework, .libreria, .base-datos, .software{
+        width: 25%;
+    }
+
 }
 
 @media(min-width:1024px){
@@ -438,8 +463,11 @@ body section{
 
    .profesion{
         font-size: 36px;
-
    }
+
+   .lenguaje, .framework, .libreria, .base-datos, .software{
+    width: 10%;
+    }
 }
 
 @media(min-width:1440px){
