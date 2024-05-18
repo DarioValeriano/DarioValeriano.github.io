@@ -315,6 +315,46 @@ body section{
     color: white;
 }
 
+.proyecto {
+    border: solid 1px white;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+}
+
+.img-proyecto{
+    flex: 1;
+}
+
+.img-proyecto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.contenido-proyecto{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.contenido-proyecto h3{
+    margin: 20px;
+    font-size: 30px;
+}
+
+.descripcion-proyecto{
+    margin: 20px;
+}
+
+.mas-info{
+    max-width: 200px;
+}
+
 .formacion {
     background-color: rgb(36, 36, 36);
     color: white;
