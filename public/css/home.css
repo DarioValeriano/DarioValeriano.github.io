@@ -311,7 +311,7 @@ body section{
 }
 
 .habilidad:hover{
-    width: 15%;
+    width: 40%;
     transition: 0.4s;
 }
 
@@ -405,9 +405,6 @@ body section{
 
 
 @media(min-width:768px){
-
-    
-
     header{
         align-items: center;
         height: 70px;
@@ -484,6 +481,10 @@ body section{
         width: 25%;
     }
 
+    .habilidad:hover{
+        width: 35%;
+    }
+
 }
 
 @media(min-width:1024px){
@@ -526,6 +527,10 @@ body section{
 
    .habilidad{
     width: 10%;
+    }
+
+    .habilidad:hover{
+        width: 15%;
     }
 }
 
