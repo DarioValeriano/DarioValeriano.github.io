@@ -68,6 +68,11 @@ function adjustScroll() {
 
 */
 
+document.addEventListener('DOMContentLoaded', function() {
+    var miVideo = document.getElementById('video-tesoro');
+    miVideo.currentTime = 40; // Establece el tiempo en segundos donde quieres que comience el video
+  });
+
 
 
 window.addEventListener("scroll", () =>{
