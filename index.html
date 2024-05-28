@@ -41,18 +41,12 @@
                     </div>
                 </div>
             </div>
-
         </div>
-        
-        
-        
     </section>
     <section class="sobre-mi" id="seccion-sobre-mi">
         <h2 class="sobre mi">Sobre mi</h2>
         <p class="detalle-sobre-mi">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nesciunt omnis, 
-            obcaecati animi nulla eos minus ipsum quo saepe, vel sunt minima eligendi illo sit rerum facere
-             necessitatibus cumque aspernatur!
+            Soy una persona motivada y autodidacta, siempre buscando nuevas oportunidades para aprender y mejorar mis habilidades. Disfruto trabajando en equipo y enfrentando desafíos que requieren soluciones creativas y técnicas. Estoy comprometido con la calidad y la eficiencia en cada proyecto en el que participo.
         </p>
     </section>
     <section class="habilidades" id="seccion-habilidades">
@@ -248,7 +242,7 @@
     <section class="proyectos-seccion" id="seccion-proyectos">
         <h2>Proyectos</h2>
         <div class="proyectos">
-            <article class="digital-tech proyecto">
+            <article class="digital-tech proyecto" data-aos="zoom-out-up" data-aos-offset="500">
                 <div class="img-proyecto">
                     <!-- <img src="/public/img/Fondo-2.png" alt=""> -->
                     <video autoplay loop muted>
@@ -333,7 +327,7 @@
                     <button class="boton mas-info" onclick= "window.location.href = './views/digital-tech.html';" >+ Información</button>
                 </div>
             </article>
-            <article class="mercado-liebre proyecto">
+            <article class="mercado-liebre proyecto" data-aos="zoom-out-up">
                 <div class="img-proyecto">
                     <!-- <img src="/public/img/MercadoLiebre.png" alt=""> -->
                     <video autoplay loop muted>
@@ -374,7 +368,9 @@
                     <button class="boton mas-info"><a href="./views/mercadoliebre.html">+ Información</a></button>
                 </div>
             </article>
-            <article class="tesoro-binario proyecto">
+            <article class="tesoro-binario proyecto" data-aos="fade-right"
+            data-aos-offset="300"
+            data-aos-easing="ease-in-sine">>
                 <div class="img-proyecto">
                     <!-- <img src="/public/img/Fondo-2.png" alt=""> -->
                     <video autoplay loop muted id="video-tesoro">
@@ -407,7 +403,9 @@
                     <button class="boton mas-info"><a href="./views/digital-tech.html">+ Información</a></button>
                 </div>
             </article>
-            <article class="pasapalabra proyecto">
+            <article class="pasapalabra proyecto" data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="5000">
                 <div class="img-proyecto">
                     <img src="/public/img/Fondo-2.png" alt="">
                 </div>
@@ -429,7 +427,7 @@
                     <button class="boton mas-info"><a href="./views/digital-tech.html">+ Información</a></button>
                 </div>
             </article>
-            <article class="formulario-tarjeta-interactivo proyecto">
+            <article class="formulario-tarjeta-interactivo proyecto" data-aos="zoom-out-up">
                 <div class="img-proyecto">
                     <!-- <img src="/public/img/Fondo-2.png" alt=""> -->
                     <video autoplay loop muted id="video-tesoro">
@@ -474,9 +472,16 @@
     </section>
     <section class="formacion" id="seccion-formacion">
         <h2>Formación</h2>
-        <article class="formacion-digital">
-            <div><p>Curso de Desarrollador Web Full Stack - Digital House</p></div>
-        </article>
+        <div class="formaciones">
+            <!-- <button> < </button> -->
+            <article class="formacion-digital">
+                <h3>Curso de Desarrollador Web Full Stack - Digital House</h3>
+                <img src="/public/img/cursoDH.jpg" alt="">
+                
+            </article>
+            <!-- <button> > </button> -->
+        </div>
+        
     </section>
     <section class="contacto" id="seccion-contacto">
         <h2>Contacto</h2>
