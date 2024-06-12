@@ -485,8 +485,23 @@
     </section>
     <section class="contacto" id="seccion-contacto">
         <h2>Contacto</h2>
-        <form action="">
+        <form id="formulario-contacto" action="https://formsubmit.co/daa.valeriano@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500/index.html">
+            <input type="hidden" name="_subject" value="New submission!">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            
+            <label for="name">Nombre</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
 
+            <label for="textarea">Detalle/Comentario</label>
+            <textarea name="textarea" id="textarea" rows="10" cols="50" required="">          </textarea>
+        
+            
+            <button class="boton" type="submit">Enviar</button>
         </form>
     </section>
     <footer>
