@@ -289,6 +289,36 @@ body section{
 .sobre-mi {
     background-color: rgb(36, 36, 36);
     color: white;
+    height: 100vh;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    position: relative;
+}
+
+.bloque-sobre-mi{
+    position: relative;
+    width: 50%;
+    height: 50%;
+    background-image: url('/public/img/Terminal-linux-root.png');
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 1px 2px 13px #00000091;
+    font-size: 20px;
+    padding: 5%;
+}
+
+.sobre-mi-titulo{
+    position: relative;
+    /*left: 5%;
+    top: 20%;*/
+    top: 30px;
+    left: 0px;
+    right: 0;
+    font-size: 80px;
+    /*background: #316cba;*/
 }
 
 .habilidades {
@@ -349,7 +379,7 @@ body section{
     margin: 10px;
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 80%;
     text-shadow: 5px 5px 10px #000000;
     /*background: linear-gradient(#fff2, transparent);*/
     /*background: linear-gradient(135deg, rgba(255, 255, 255, 0.122), rgba(199, 199, 199, 0.584));*/
@@ -451,16 +481,20 @@ body section{
 }
 
 .formacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(36, 36, 36);
     color: white;
-    
+    height: 100vh;
+    padding: 0;
 }
 
 .formaciones{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 50px;
 }
 
 .formaciones button{
@@ -485,11 +519,10 @@ body section{
 
 .formacion-digital{
     color: #ffffff;
-    width: 80%;
+    width: 90%;
     border: 1px solid black;
     padding: 0;
     border-radius: 5px;
-    /*backdrop-filter: blur(10px);*/
     border: none;
 }
 
@@ -510,7 +543,8 @@ body section{
 .contacto{
     background-image: url('/public/img/Fondo-10.png');
     color: white;
-    height: calc(100vh - 200px);
+    height: 100vh;
+    padding: 0;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -529,8 +563,10 @@ body section{
     align-items: center;
     justify-content: space-between;
     border-radius: 20px;
-    height: 500px;
+    height: 60%;
+    max-height: 500px;
     width: 70%;
+    max-width: 900px;
     padding: 50px;
     backdrop-filter: blur(85px);
     background: linear-gradient(to left, #316cbab5 0%, rgba(0, 0, 0, 0.608) 100%);
@@ -621,9 +657,8 @@ body section{
 @media(min-width:768px){
     header{
         align-items: center;
-        align-items: none;
         left: 0;
-        right: none;
+    
         width: 100%;
         transition: 0.4s;
     }
@@ -645,6 +680,19 @@ body section{
         flex-direction: row;
     }
 
+    .elemento-lista{
+        height: 55px;
+    }
+
+    .elemento-lista a{
+        font-size: 100%;
+        height: 55px;
+    }
+
+    .bloque-principal{
+        padding-top: 50px;
+    }
+
     .saludo{
         display: flex;
         justify-content: center;
@@ -652,12 +700,11 @@ body section{
    }
 
    .hola {
-    font-size: 22vw;
+        font-size: 22vw;
     }
 
     .foto{
         width: 70%;
-        top: 0;
         left: 0;
         right: 0;
         bottom: none;
@@ -698,24 +745,40 @@ body section{
         width: 35%;
     }
 
+    .proyecto {
+        width: 40%;
+    }
+
+    .formaciones{
+        padding: 50px;
+        padding: 10%;
+    }
+
+    .formacion-digital{
+        width: 60%;
+        max-width: 1200px;
+    }
+
 }
 
 @media(min-width:1024px){
 
     .presentacion{
-        padding: 6% 5% 6% 5%;
+        /*padding: 6% 5% 6% 5%;*/
+        padding: 0;
         justify-content: center;
         align-items: center;
     }
 
     .presentacion-bloque{
-        max-width: 1500px;
+        max-width: 1200px;
     }
 
    .foto{
-        max-width: 900px;
+        max-width: 800px;
         /*display: flex;*/
    }
+
 
    .holaa{
         /*position: absolute;
@@ -731,7 +794,7 @@ body section{
    }
 
    .nombre{
-        font-size: 80px;
+        font-size: 70px;
    }
 
    .profesion{
@@ -745,14 +808,27 @@ body section{
     .habilidad:hover{
         width: 15%;
     }
+
+    .formacion h2{
+        /*padding-top: 70px;*/
+    }
+
+    .formaciones{
+        padding: 0;
+    }
 }
 
 @media(min-width:1440px){
+    .presentacion-bloque{
+        max-width: 1300px;
+    }
+
     .presentacion{
-        padding: 40px 70px;
+        /*padding: 40px 70px;*/
+        padding: 0;
     }
 
     .hola {
-        font-size: 320px;
+        font-size: 300px;
    }
 }
