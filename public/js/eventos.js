@@ -68,6 +68,26 @@ function adjustScroll() {
 
 */
 
+
+document.addEventListener('DOMContentLoaded', function() {
+    const bloque1 = document.querySelector('.primer-bloque');
+    const bloque2 = document.querySelector('.segundo-bloque');
+
+    bloque2.classList.add('oculto')
+    
+    function alternarVisibilidad(bloque) {
+        bloque.classList.toggle('oculto')
+    }
+    
+    setInterval(function() {
+        alternarVisibilidad(bloque1);
+        alternarVisibilidad(bloque2);
+    }, 5000); // Cambia cada 3 segundos (3000 milisegundos)
+});
+
+
+
+
 document.addEventListener('DOMContentLoaded', function() {
     var miVideo = document.getElementById('video-tesoro');
     miVideo.currentTime = 40; // Establece el tiempo en segundos donde quieres que comience el video
@@ -78,7 +98,6 @@ document.addEventListener('DOMContentLoaded', function() {
 window.addEventListener("scroll", () =>{
     if(lista.classList.contains('invisible')){
         navbar.classList.toggle("blured", window.scrollY > 0)
-        console.log(elementosLista)
         //elementosLista.classList.toggle("sombreado", window.scrollY > 0)
     }
 
