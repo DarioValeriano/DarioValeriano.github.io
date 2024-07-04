@@ -357,7 +357,7 @@ body section{
 .habilidades {
     padding: 0;
     background-color: #dadada;
-    height: 100dvh;
+    height: auto;
     padding-top: 50px;
 }
 
@@ -395,7 +395,7 @@ body section{
 }
 
 .habilidad{
-    width: 30%;
+    width: 15%;
     margin: 10px;
     transition: 0.4s;
 }
@@ -418,7 +418,7 @@ body section{
 }
 
 .proyectos-seccion {
-    background-image: url('/public/img/Fondo-10.png');
+    background-color: #141414;
     color: white;
     padding: 5%;
     height: auto;
@@ -610,7 +610,7 @@ body section{
 }
 
 .contacto{
-    background-image: url('/public/img/Fondo-10.png');
+    background-color: #141414;
     color: white;
     height: 100vh;
     padding: 0;
@@ -781,17 +781,13 @@ body section{
 
     .nombre{
         font-size: 8vw;
-        bottom: -25px;
+        bottom: -35px;
         left: 30px;
         margin: auto;
     }
 
     .descripcion{
         margin-top: 20px;
-    }
-
-    .boton{
-
     }
 
     .detalle-presentacion{
@@ -807,11 +803,11 @@ body section{
     }
 
     .habilidad{
-        width: 25%;
+        width: 20%;
     }
 
     .habilidad:hover{
-        width: 35%;
+        width: 25%;
     }
 
     .proyecto {
@@ -849,6 +845,9 @@ body section{
         /*display: flex;*/
    }
 
+   .hola{
+    font-size: 15vw;
+   }
 
    .holaa{
         /*position: absolute;
@@ -872,13 +871,13 @@ body section{
    }
 
    .habilidad{
-        width: 8%;
-        max-width: 150px;
+        width: 5%;
+        max-width: 100px;
     }
 
     .habilidad:hover{
         transition: width 0.5s;
-        width: 10%;
+        width: 6%;
     }
 
     .proyecto {
