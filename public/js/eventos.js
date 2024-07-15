@@ -1,6 +1,7 @@
 const menu = document.querySelector('.menu-hamburguesa')
 const lista = document.querySelector('.lista-nav')
 const navbar = document.querySelector('header')
+const links = document.querySelector('.links-fixed')
 const elementosLista = document.querySelectorAll('.elemento-lista')
 
 menu.addEventListener('click', () => {
@@ -58,6 +59,12 @@ window.addEventListener("scroll", () =>{
     if(lista.classList.contains('invisible')){
         navbar.classList.toggle("blured", window.scrollY > 0)
     }
+    if(window.scrollY > window.innerHeight / 3){
+        links.classList.remove("invisible")
+    } else{
+        links.classList.add("invisible")
+    }
+    
 })
 
 window.addEventListener('resize', function() {

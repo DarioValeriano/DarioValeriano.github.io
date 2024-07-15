@@ -318,6 +318,105 @@ body section{
     color: var(--color);
 }
 
+.links-redes{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.red-content {
+    margin: 5px;
+    position: relative;
+    /*display: inline-block;*/
+    cursor: pointer;
+    /*background-color: #282828;*/
+    /*color: #f1f1f1;*/
+    /*padding: 1em 3em;*/
+    /*border-radius: 1em;*/
+}
+
+.red-content a {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: #4d4d4d;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.red-content a:hover {
+    color: white;
+}
+
+.linkedin a:hover{
+    background-color: #0274b3;
+}
+
+.git-personal a:hover{
+    background-color: #24262a;
+}
+
+.git-estudiantil a:hover{
+    background-color: #636363;
+}
+
+.red-content a svg {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 60%;
+}
+
+.nombre-red {
+    visibility: hidden;
+    /*width: 200px;*/
+    color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.nombre-linkedin{
+    background-color: #0274b3;
+}
+
+.nombre-git-personal{
+    background-color: #24262a;
+}
+
+.nombre-git-estudiantil{
+    background-color: #636363;
+}
+
+.red-content:hover .nombre-red {
+    visibility: visible;
+    opacity: 1;
+}
+
+.red-content .nombre-red::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    border-width: 8px;
+    border-style: solid;
+    border-color: #28282817 transparent transparent transparent;
+    transform: translateX(-50%);
+}
+
 .sobre-mi {
     background-color: rgb(36, 36, 36);
     color: white;
@@ -339,8 +438,16 @@ body section{
     background-size: cover;
     border-radius: 20px;
     box-shadow: 1px 2px 13px #00000091;
-    font-size: 20px;
     padding: 5%;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.detalle-sobre-mi{
+    font-size: 20px;
+    margin-left: 15px;
 }
 
 .sobre-mi-titulo{
@@ -482,7 +589,8 @@ body section{
 }
 
 .proyecto:hover{
-    background-color: #dadadaa6;
+    /*background-color: #dadadaa6;*/
+    background-color: #818181a6;
     transition: .5s;
 }
 
@@ -624,7 +732,8 @@ body section{
 }
 
 .contacto h2{
-    margin: 50px;
+    margin-top: 30px;
+    margin-bottom: 20px
 }
 
 #formulario-contacto{
@@ -677,15 +786,35 @@ body section{
     background: transparent;
 }
 
-/* Efectos */
+.links-fixed{
+    flex-direction: column;
+    border-radius: 30px 30px 0 0;
+    position: fixed;
+    right: 50px;
+    bottom: 0;
+    padding: 5px 0 10px 0;
+    border: solid 1px white;
+    border-bottom: none;
+    transition: opacity 5s;
+}
 
+.links-fixed .red-content a{
+    width: 40px;
+    height: 40px;
+}
+
+footer{
+    
+    background-color: #000;
+}
+
+/* Efectos */
 
 .blured {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     backdrop-filter: blur(10px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
-
 
 .redimension{
     width: 60%;
@@ -694,6 +823,13 @@ body section{
 
 .invisible{
     display: none;
+}
+
+.scrollable {
+    width: 100%;          /* Ancho del div */
+    height: 50%;         /* Altura del div */
+    overflow-y: auto;      /* Desplazamiento vertical */
+    padding: 10px;         /* Espacio interno */
 }
 
 /* MERCADOLIEBRE */
@@ -721,16 +857,6 @@ body section{
     left: 10%;
     z-index: 0;
 }
-
-
-.scrollable {
-    width: 100%;          /* Ancho del div */
-    height: 50%;         /* Altura del div */
-    overflow-y: auto;      /* Desplazamiento vertical */
-    padding: 10px;         /* Espacio interno */
-}
-
-
 
 @media(min-width:768px){
     header{
@@ -825,7 +951,7 @@ body section{
 
     .formaciones{
         padding: 50px;
-        padding: 10%;
+        padding: 1% 10%;
     }
 
     .formacion-digital{
@@ -856,19 +982,6 @@ body section{
 
    .hola{
     font-size: 15vw;
-   }
-
-   .holaa{
-        /*position: absolute;
-        top: 20%;*/
-        /*margin: auto;*/
-   }
-
-   .soy{
-        /*position: absolute;
-        top: 20%;
-        right: 10%;*/
-        /*margin: auto;*/
    }
 
    .nombre{
@@ -905,6 +1018,10 @@ body section{
     }
 
     .img-proyecto video{
+        height: 90%;
+    }
+
+    .img-proyecto img{
         height: 90%;
     }
 
