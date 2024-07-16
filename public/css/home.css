@@ -590,8 +590,8 @@ body section{
 
 .proyecto:hover{
     /*background-color: #dadadaa6;*/
-    background-color: #818181a6;
-    transition: .5s;
+    /*background-color: #818181a6;
+    transition: .5s;*/
 }
 
 .img-proyecto{
