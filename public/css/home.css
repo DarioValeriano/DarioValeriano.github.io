@@ -443,6 +443,7 @@ body section{
     text-align: left;
     align-items: center;
     justify-content: space-between;
+    max-width: 1400px;
 }
 
 .detalle-sobre-mi{
@@ -1008,6 +1009,7 @@ footer{
         height: 70vh;
         padding: 0;
         padding-left: 20px;
+        max-height: 500px;
     }
 
     .img-proyecto{
