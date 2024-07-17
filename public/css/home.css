@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     overflow-y: scroll;
     scroll-snap-type: y mandatory;
+    overflow-x: hidden;
 }
 
 .background-body{
@@ -57,7 +58,6 @@ header {
     align-items: flex-end;
 }
 
-
 .lista-nav {
     flex-direction: column;
     justify-content: space-around;
@@ -69,11 +69,9 @@ header {
     text-align: center;
     list-style: none;
     color: rgba(255, 255, 255, 0.67);
-    /*color: whitesmoke;*/
     width: 100%;
     flex-grow: 1;
     height: 60px;
-    /*text-shadow: 1px 2px 3px black;*/
 }
 
 .sombreado{
@@ -130,11 +128,10 @@ body section{
     display: flex;
     flex-direction: column;
     text-align: start;
-    /*background-color: rgb(74, 95, 163);*/
     background-image: url('/public/img/Fondo-0.jpg');
     background-size: cover;
     color: white;
-    height: 100dvh;
+    height: auto;
 }
 
 .presentacion-bloque{
@@ -187,8 +184,6 @@ body section{
     left: 20px;
     font-size: 270%;
     z-index: 3;
-    bottom: 0;
-    height: 0.95em;
 }
 
 .nombre::before{
@@ -241,18 +236,12 @@ body section{
     display: flex;
     justify-content: space-around;
     z-index: 12;
-    
+    flex-direction: column;
+    align-items: center;
+    height: 180px;
 }
 
 .boton{
-    /*padding: 20px;
-    border-radius: 30px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.362);
-    color: rgb(210, 210, 210);
-    font-weight: bold;
-    margin: 2px;
-    width: 100%;*/
     --color: #316cba;
     padding: 0.8em 1.7em;
     background-color: transparent;
@@ -268,7 +257,8 @@ body section{
     text-transform: uppercase;
     color: var(--color);
     z-index: 1;
-    
+    min-width: 170px;
+    max-width: 200px;
 }
 
 .boton::before, .boton::after{
@@ -328,12 +318,7 @@ body section{
 .red-content {
     margin: 5px;
     position: relative;
-    /*display: inline-block;*/
     cursor: pointer;
-    /*background-color: #282828;*/
-    /*color: #f1f1f1;*/
-    /*padding: 1em 3em;*/
-    /*border-radius: 1em;*/
 }
 
 .red-content a {
@@ -434,7 +419,6 @@ body section{
     position: relative;
     width: 80%;
     height: 50%;
-    /*background-image: url('/public/img/Terminal-linux-root.png');*/
     background-size: cover;
     border-radius: 20px;
     box-shadow: 1px 2px 13px #00000091;
@@ -444,6 +428,7 @@ body section{
     align-items: center;
     justify-content: space-between;
     max-width: 1400px;
+    flex-direction: column;
 }
 
 .detalle-sobre-mi{
@@ -470,18 +455,12 @@ body section{
 }
 
 .habilidades-actuales{
-    /*background: linear-gradient(rgba(255, 255, 255, 0.548), rgba(71, 65, 65, 0.075));
-    border-radius: 30px;
-    border: #fff;
-    padding: 40px;*/
     display: flex;
     flex-direction: column;
-    
     justify-content: space-evenly;
 }
 
 .lenguajes, .frameworks, .librerias, .bases-de-datos, .softwares {
-    /*position: absolute;*/
     display: flex;
     justify-content:space-evenly;
     align-items: center;
@@ -493,9 +472,9 @@ body section{
 
 .primer-bloque, .segundo-bloque{
     top: 0;
-    flex: 1; /* Para que ocupen el mismo espacio */
+    flex: 1;
     padding: 20px;
-    transition: opacity 0.5s ease-in-out; /* Transición suave de opacidad */
+    transition: opacity 0.5s ease-in-out;
 }
 
 .oculto{
@@ -554,13 +533,9 @@ body section{
     flex-direction: column;
     width: 80%;
     text-shadow: 5px 5px 10px #000000;
-    /*background: linear-gradient(#fff2, transparent);*/
-    /*background: linear-gradient(135deg, rgba(255, 255, 255, 0.122), rgba(199, 199, 199, 0.584));*/
     backdrop-filter: blur(1px);
     --background: linear-gradient(to left, #316cbab5 0%, rgba(8, 8, 8, 0.608) 100%);
-    /*border-radius: 1rem;*/
     overflow: visible;
-    /*background: var(--background);*/
     position: relative;
     z-index: 1;
     box-shadow: 0 0 5px #316cba,
@@ -569,9 +544,6 @@ body section{
                         0 0 40px #316cba;
                         /*0 0 80px #316cba;*/
                         /*0 0 100px #316cba;*/
-
-    /*text-shadow: 0 0 5px #0ff, 0 0 5px #0ff;*/
-
 }
    
 .proyecto::after {
@@ -587,12 +559,6 @@ body section{
     filter: blur(85px);
     background: var(--background);
     transition: opacity .5s;
-}
-
-.proyecto:hover{
-    /*background-color: #dadadaa6;*/
-    /*background-color: #818181a6;
-    transition: .5s;*/
 }
 
 .img-proyecto{
@@ -747,7 +713,7 @@ body section{
     max-height: 500px;
     width: 70%;
     max-width: 400px;
-    padding: 50px;
+    padding: 20px;
     backdrop-filter: blur(85px);
     background: linear-gradient(to left, #316cbab5 0%, rgba(0, 0, 0, 0.608) 100%);
     border: 1px solid #fff;
@@ -791,12 +757,13 @@ body section{
     flex-direction: column;
     border-radius: 30px 30px 0 0;
     position: fixed;
-    right: 50px;
+    right: 8px;
     bottom: 0;
     padding: 5px 0 10px 0;
     border: solid 1px white;
     border-bottom: none;
     transition: opacity 5s;
+    z-index: 40;
 }
 
 .links-fixed .red-content a{
@@ -827,10 +794,10 @@ footer{
 }
 
 .scrollable {
-    width: 100%;          /* Ancho del div */
-    height: 50%;         /* Altura del div */
-    overflow-y: auto;      /* Desplazamiento vertical */
-    padding: 10px;         /* Espacio interno */
+    width: 100%;
+    height: 300px;
+    overflow-y: auto;
+    padding: 10px;
 }
 
 /* MERCADOLIEBRE */
@@ -863,7 +830,6 @@ footer{
     header{
         align-items: center;
         left: 0;
-    
         width: 100%;
         transition: 0.4s;
     }
@@ -932,6 +898,8 @@ footer{
 
     .botones {
         justify-content: flex-start;
+        flex-direction: row;
+        height: auto;
     }
 
     .boton{
@@ -950,6 +918,10 @@ footer{
         width: 40%;
     }
 
+    .bloque-sobre-mi{
+        flex-direction: row;
+    }
+
     .formaciones{
         padding: 50px;
         padding: 1% 10%;
@@ -960,15 +932,22 @@ footer{
         max-width: 1200px;
     }
 
+    .links-fixed{
+        right: 20px;
+    }
+
+    #formulario-contacto{
+        padding: 50px;
+    }
+
 }
 
 @media(min-width:1024px){
-
     .presentacion{
-        /*padding: 6% 5% 6% 5%;*/
         padding: 0;
         justify-content: center;
         align-items: center;
+        height: 100dvh;
     }
 
     .presentacion-bloque{
@@ -978,20 +957,19 @@ footer{
 
    .foto{
         max-width: 600px;
-        /*display: flex;*/
-   }
+    }
 
    .hola{
     font-size: 15vw;
-   }
+    }
 
    .nombre{
         font-size: 70px;
-   }
+    }
 
    .profesion{
         font-size: 36px;
-   }
+    }
 
    .habilidad{
         width: 5%;
@@ -1027,6 +1005,14 @@ footer{
         height: 90%;
     }
 
+    .links-fixed{
+        right: 50px;
+    }
+
+    .scrollable {
+        height: 50%;
+    }
+
 }
 
 @media(min-width:1440px){
@@ -1035,11 +1021,10 @@ footer{
     }
 
     .presentacion{
-        /*padding: 40px 70px;*/
         padding: 0;
     }
 
     .hola {
         font-size: 240px;
-   }
+    }
 }

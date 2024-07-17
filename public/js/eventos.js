@@ -3,6 +3,7 @@ const lista = document.querySelector('.lista-nav')
 const navbar = document.querySelector('header')
 const links = document.querySelector('.links-fixed')
 const elementosLista = document.querySelectorAll('.elemento-lista')
+const secciones = document.querySelectorAll('section');
 
 menu.addEventListener('click', () => {
     if(window.scrollY == 0){
@@ -56,14 +57,23 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 window.addEventListener("scroll", () =>{
+    let posicionScroll = window.scrollY;
     if(lista.classList.contains('invisible')){
-        navbar.classList.toggle("blured", window.scrollY > 0)
+        navbar.classList.toggle("blured", posicionScroll> 0)
     }
-    if(window.scrollY > window.innerHeight / 3){
+    if(posicionScroll > window.innerHeight / 3){
         links.classList.remove("invisible")
     } else{
         links.classList.add("invisible")
     }
+    secciones.forEach(seccion => {
+        const seccionTop = seccion.offsetTop;
+        const seccionHeight = seccion.clientHeight;
+    
+        if (posicionScroll >= seccionTop && posicionScroll < seccionTop + seccionHeight) {
+          history.replaceState(null, '', `#${seccion.id}`);
+        }
+    })
     
 })
 
