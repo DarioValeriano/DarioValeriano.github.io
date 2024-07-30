@@ -38,7 +38,7 @@ for (let i = 0; i < elementosLista.length; i++) {
     })
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+/*document.addEventListener('DOMContentLoaded', function() {
     const bloque1 = document.querySelector('.primer-bloque');
     const bloque2 = document.querySelector('.segundo-bloque');
     bloque2.classList.add('oculto')
@@ -48,8 +48,8 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(function() {
         alternarVisibilidad(bloque1);
         alternarVisibilidad(bloque2);
-    }, 10000); // Cambia cada 10 segundos (10000 milisegundos)
-});
+    }, 15000); // Cambia cada 10 segundos (10000 milisegundos)
+});*/
 
 document.addEventListener('DOMContentLoaded', function() {
     var miVideo = document.getElementById('video-tesoro');

@@ -409,7 +409,7 @@ body section{
     padding: 0;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex-direction: column;
     position: relative;
     padding: 5%;
@@ -418,7 +418,6 @@ body section{
 .bloque-sobre-mi{
     position: relative;
     width: 80%;
-    height: 50%;
     background-size: cover;
     border-radius: 20px;
     box-shadow: 1px 2px 13px #00000091;
@@ -475,6 +474,14 @@ body section{
     flex: 1;
     padding: 20px;
     transition: opacity 0.5s ease-in-out;
+}
+
+.primer-bloque{
+    padding-bottom: 0;
+}
+
+.segundo-bloque{
+    padding-top: 0;
 }
 
 .oculto{
@@ -618,6 +625,19 @@ body section{
     width: 10%;
     margin: 10px;
     transition: 0.4s;
+}
+
+.botones-proyectos{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.mas-info svg{
+    width: 25px;
+    color: white;
+    
 }
 
 
@@ -918,6 +938,8 @@ footer{
         width: 40%;
     }
 
+    
+
     .bloque-sobre-mi{
         flex-direction: row;
     }
@@ -969,6 +991,18 @@ footer{
 
    .profesion{
         font-size: 36px;
+    }
+
+    .sobre-mi{
+        height: 100vh;
+        padding: 0;
+    }
+
+    .habilidades {
+        padding: 0;
+        background-color: #dadada;
+        height: auto;
+        padding-top: 70px;
     }
 
    .habilidad{
